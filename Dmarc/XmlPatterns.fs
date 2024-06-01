@@ -1,0 +1,34 @@
+namespace Dmarc
+
+open System.Xml
+
+[<AutoOpen>]
+module internal XmlPatterns =
+
+    [<return : Struct>]
+    let (|NodeWithChildren|_|) (expectedName : string) (node : XmlNode) : unit voption =
+        if node.Name = expectedName && node.HasChildNodes then
+            ValueSome ()
+        else
+            ValueNone
+
+    let (|OneChildNode|_|) (expectedName : string) (node : XmlNode) : XmlNode option =
+        if node.Name = expectedName && node.HasChildNodes && node.ChildNodes.Count = 1 then
+            Some (node.FirstChild)
+        else
+            None
+
+    let (|NoChildrenNode|_|) (node : XmlNode) : string option =
+        if node.HasChildNodes then None else Some node.Value
+
+    [<return : Struct>]
+    let (|Int64|_|) (s : string) : int64 voption =
+        match System.Int64.TryParse s with
+        | false, _ -> ValueNone
+        | true, v -> ValueSome v
+
+    [<return : Struct>]
+    let (|Int|_|) (s : string) : int voption =
+        match System.Int32.TryParse s with
+        | false, _ -> ValueNone
+        | true, v -> ValueSome v

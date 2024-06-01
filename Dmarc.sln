@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dmarc", "Dmarc\Dmarc.fsproj", "{35773DF5-99B3-4624-A57D-A076E8E7DCC9}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dmarc.App", "Dmarc.App\Dmarc.App.fsproj", "{CDBC4619-B56F-4956-8BC5-1B64D5EC5662}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Dmarc.Test", "Dmarc.Test\Dmarc.Test.fsproj", "{46C1EDBE-1E50-4946-BE8A-E5D2C6C45EE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35773DF5-99B3-4624-A57D-A076E8E7DCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35773DF5-99B3-4624-A57D-A076E8E7DCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35773DF5-99B3-4624-A57D-A076E8E7DCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35773DF5-99B3-4624-A57D-A076E8E7DCC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDBC4619-B56F-4956-8BC5-1B64D5EC5662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBC4619-B56F-4956-8BC5-1B64D5EC5662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBC4619-B56F-4956-8BC5-1B64D5EC5662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBC4619-B56F-4956-8BC5-1B64D5EC5662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C1EDBE-1E50-4946-BE8A-E5D2C6C45EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C1EDBE-1E50-4946-BE8A-E5D2C6C45EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C1EDBE-1E50-4946-BE8A-E5D2C6C45EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C1EDBE-1E50-4946-BE8A-E5D2C6C45EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
