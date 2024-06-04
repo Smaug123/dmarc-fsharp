@@ -2,6 +2,11 @@
 # Please dont edit it manually, your changes might get overwritten!
 {fetchNuGet}: [
   (fetchNuGet {
+    pname = "BouncyCastle.Cryptography";
+    version = "2.3.1";
+    sha256 = "0wagr2ibc12mp58i1fql2xbfb1h2b1bpi1gpsynkl2il3mycvyxg";
+  })
+  (fetchNuGet {
     pname = "fantomas";
     version = "6.3.4";
     sha256 = "1bf57pzvl0i1bgic2vf08mqlzzbd5kys1ip9klrhm4f155ksm9fm";
@@ -67,6 +72,11 @@
     sha256 = "1bl471s7fx9jycr0cc8rylwf34mrvlg9qn1an6l86nisavfcyb7v";
   })
   (fetchNuGet {
+    pname = "MimeKit";
+    version = "4.6.0";
+    sha256 = "1rmz54d836gjhm9mhpa57h6d36gw4pdqh9xjidyy7548c30qdqrr";
+  })
+  (fetchNuGet {
     pname = "Nerdbank.GitVersioning";
     version = "3.6.133";
     sha256 = "1cdw8krvsnx0n34f7fm5hiiy7bs6h3asvncqcikc0g46l50w2j80";
@@ -92,8 +102,18 @@
     sha256 = "1srx1629s0k1kmf02nmz251q07vj6pv58mdafcr5dr0bbn1fh78i";
   })
   (fetchNuGet {
+    pname = "System.Formats.Asn1";
+    version = "8.0.0";
+    sha256 = "04h75wflmzl0qh125p0209wx006rkyxic1y404m606yjvpl2alq1";
+  })
+  (fetchNuGet {
     pname = "System.Reflection.Metadata";
     version = "1.6.0";
     sha256 = "1wdbavrrkajy7qbdblpbpbalbdl48q3h34cchz24gvdgyrlf15r4";
+  })
+  (fetchNuGet {
+    pname = "System.Security.Cryptography.Pkcs";
+    version = "8.0.0";
+    sha256 = "04kqf1lhsq3fngiljanmrz2774x5h2fc8p57v04c51jwwqhwi9ya";
   })
 ]

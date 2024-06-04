@@ -22,6 +22,12 @@ module internal XmlPatterns =
         if node.HasChildNodes then None else Some node.Value
 
     [<return : Struct>]
+    let (|NamedNoChildren|_|) (name : string) (node : XmlNode) : unit voption =
+        if node.HasChildNodes then ValueNone
+        elif node.Name = name then ValueSome ()
+        else ValueNone
+
+    [<return : Struct>]
     let (|Int64|_|) (s : string) : int64 voption =
         match System.Int64.TryParse s with
         | false, _ -> ValueNone
