@@ -68,7 +68,7 @@ module TestParse =
             DkimAlignment = Some Alignment.Relaxed
             SpfAlignment = Some Alignment.Relaxed
             Policy = Disposition.None
-            SubdomainPolicy = Disposition.None
+            SubdomainPolicy = Some Disposition.None
             Percentage = 100
             FailureOptions = None
         }

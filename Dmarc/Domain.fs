@@ -281,7 +281,7 @@ type PolicyEvaluated =
     override this.ToString () =
         let reason =
             this.Reason
-            |> Seq.map _.ToString ()
+            |> Seq.map (fun x -> x.ToString ())
             |> String.concat "; "
             |> fun s -> if String.IsNullOrEmpty s then "" else $" (reason: %s{s})"
 
