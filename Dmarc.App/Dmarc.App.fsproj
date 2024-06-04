@@ -13,4 +13,8 @@
       <ProjectReference Include="..\Dmarc\Dmarc.fsproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MimeKit" Version="4.6.0" />
+    </ItemGroup>
+
 </Project>

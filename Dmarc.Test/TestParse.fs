@@ -39,7 +39,7 @@ module TestParse =
         {
             OrgName = Some "google.com"
             Email = "noreply-dmarc-support@google.com"
-            ExtraContactInfo = Uri "https://support.google.com/a/answer/2466580"
+            ExtraContactInfo = Some (Uri "https://support.google.com/a/answer/2466580")
             ReportId = "12345678901234567890"
             DateRange = expectedDateRange
             Error = []
@@ -68,7 +68,7 @@ module TestParse =
             DkimAlignment = Some Alignment.Relaxed
             SpfAlignment = Some Alignment.Relaxed
             Policy = Disposition.None
-            SubdomainPolicy = Disposition.None
+            SubdomainPolicy = Some Disposition.None
             Percentage = 100
             FailureOptions = None
         }
