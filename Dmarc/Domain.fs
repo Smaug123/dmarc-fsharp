@@ -31,7 +31,8 @@ type ReportMetadata =
     {
         OrgName : string option
         Email : string
-        ExtraContactInfo : Uri
+        /// Mandatory according to the RFC, but Microsoft doesn't provide it
+        ExtraContactInfo : Uri option
         ReportId : string
         DateRange : DateRange
         Error : string list
@@ -80,10 +81,6 @@ type ReportMetadata =
             reportId
             |> Option.defaultWith (fun () -> failwith "expected report_id, got none")
 
-        let extraContactInfo =
-            extraContactInfo
-            |> Option.defaultWith (fun () -> failwith "expected extra_contact_info, got none")
-
         let dateRange =
             dateRange
             |> Option.defaultWith (fun () -> failwith "expected date_range, got none")
@@ -113,6 +110,12 @@ type Disposition =
     | Quarantine
     | Reject
 
+    override this.ToString () =
+        match this with
+        | Disposition.None -> "none"
+        | Disposition.Quarantine -> "quarantine"
+        | Disposition.Reject -> "reject"
+
     static member ofString (s : string) : Disposition =
         match s with
         | "none" -> Disposition.None
@@ -126,7 +129,8 @@ type PolicyPublished =
         DkimAlignment : Alignment option
         SpfAlignment : Alignment option
         Policy : Disposition
-        SubdomainPolicy : Disposition
+        /// Mandated by RFC-7489 but Yahoo doesn't send it
+        SubdomainPolicy : Disposition option
         Percentage : int
         /// Mandated by RFC-7489 but absent from Google's response.
         FailureOptions : string option
@@ -185,10 +189,6 @@ type PolicyPublished =
         let policy =
             policy |> Option.defaultWith (fun () -> failwith "expected policy, got none")
 
-        let subdomainPolicy =
-            subdomainPolicy
-            |> Option.defaultWith (fun () -> failwith "expected subdomainPolicy, got none")
-
         let percentage =
             percentage
             |> Option.defaultWith (fun () -> failwith "expected percentage, got none")
@@ -206,6 +206,11 @@ type PolicyPublished =
 type DmarcResult =
     | Pass
     | Fail
+
+    override this.ToString () =
+        match this with
+        | DmarcResult.Pass -> "pass"
+        | DmarcResult.Fail -> "fail"
 
     static member ofString (s : string) : DmarcResult =
         match s with
@@ -273,6 +278,15 @@ type PolicyEvaluated =
         Reason : PolicyOverrideReason list
     }
 
+    override this.ToString () =
+        let reason =
+            this.Reason
+            |> Seq.map _.ToString ()
+            |> String.concat "; "
+            |> fun s -> if String.IsNullOrEmpty s then "" else $" (reason: %s{s})"
+
+        $"d=%O{this.Disposition}, spf %O{this.Spf}, dkim %O{this.Dkim}%s{reason}"
+
     static member ofXml (node : XmlNode) : PolicyEvaluated =
         if not node.HasChildNodes then
             failwith "expected policy evaluation node to have children, but it did not"
@@ -296,7 +310,7 @@ type PolicyEvaluated =
                 match spf with
                 | None -> spf <- Some (DmarcResult.ofString v)
                 | Some v2 -> failwith $"spf appeared twice, values %O{v2} and %s{v}"
-            | OneChildNode "reason" v -> reason.Add (PolicyOverrideReason.ofXml v)
+            | NodeWithChildren "reason" -> reason.Add (PolicyOverrideReason.ofXml i)
             | _ -> failwith $"unrecognised node: %s{i.Name}, %s{i.InnerText}"
 
         let spf = spf |> Option.defaultWith (fun () -> failwith "expected spf, got none")
@@ -318,6 +332,9 @@ type Row =
         Count : int
         Policy : PolicyEvaluated
     }
+
+    override this.ToString () =
+        $"%O{this.SourceIp}: %i{this.Count} messages (%O{this.Policy})"
 
     static member ofXml (node : XmlNode) : Row =
         if not node.HasChildNodes then
@@ -366,6 +383,19 @@ type Identifier =
         EnvelopeFrom : string option
         HeaderFrom : string
     }
+
+    override this.ToString () =
+        let envelopeFrom =
+            match this.EnvelopeFrom with
+            | None -> "<no EnvelopeFrom>"
+            | Some s -> s
+
+        let envelopeTo =
+            match this.EnvelopeTo with
+            | None -> "<no EnvelopeTo>"
+            | Some s -> s
+
+        $"%s{this.HeaderFrom} (to: %s{envelopeTo}, from: %s{envelopeFrom})"
 
     static member ofXml (node : XmlNode) : Identifier =
         if not node.HasChildNodes then
@@ -430,6 +460,19 @@ type DkimAuthResult =
         HumanResult : string option
     }
 
+    override this.ToString () =
+        let selector =
+            match this.Selector with
+            | None -> ""
+            | Some s -> $" (%s{s})"
+
+        let humanResult =
+            match this.HumanResult with
+            | None -> ""
+            | Some s -> $" (%s{s})"
+
+        $"%s{this.Domain}%s{selector}: %O{this.Result}%s{humanResult}"
+
     static member ofXml (node : XmlNode) : DkimAuthResult =
         if not node.HasChildNodes then
             failwith "expected dkim auth result node to have children, but it did not"
@@ -457,6 +500,9 @@ type DkimAuthResult =
                 match humanResult with
                 | None -> humanResult <- Some v
                 | Some v2 -> failwith $"human_result appeared twice, values %s{v2} and %s{v}"
+            | NamedNoChildren "human_result" ->
+                // Mimecast sends this node empty
+                ()
             | _ -> failwith $"unrecognised node: %s{i.Name}, %s{i.InnerText}"
 
         let domain =
@@ -476,6 +522,11 @@ type SpfDomainScope =
     | Helo
     | Mfrom
 
+    override this.ToString () =
+        match this with
+        | SpfDomainScope.Helo -> "helo"
+        | SpfDomainScope.Mfrom -> "mfrom"
+
     static member ofString (s : string) : SpfDomainScope =
         match s with
         | "helo" -> SpfDomainScope.Helo
@@ -491,6 +542,16 @@ type SpfResult =
     | SoftFail
     | TempError
     | PermError
+
+    override this.ToString () =
+        match this with
+        | SpfResult.None -> "none"
+        | SpfResult.Neutral -> "neutral"
+        | SpfResult.Pass -> "pass"
+        | SpfResult.Fail -> "fail"
+        | SpfResult.SoftFail -> "softfail"
+        | SpfResult.TempError -> "temperror"
+        | SpfResult.PermError -> "permerror"
 
     static member ofString (s : string) : SpfResult =
         match s with
@@ -512,6 +573,14 @@ type SpfAuthResult =
         Scope : SpfDomainScope option
         Result : SpfResult
     }
+
+    override this.ToString () =
+        let scope =
+            match this.Scope with
+            | None -> "<no scope>"
+            | Some s -> (s : SpfDomainScope).ToString ()
+
+        $"%s{this.Domain}, %s{scope}: %O{this.Result}"
 
     static member ofXml (node : XmlNode) : SpfAuthResult =
         if not node.HasChildNodes then
@@ -556,6 +625,12 @@ type AuthResult =
         SpfTail : SpfAuthResult list
     }
 
+    override this.ToString () =
+        let tail = this.SpfTail |> Seq.map string<SpfAuthResult> |> String.concat ", "
+        let spf = this.SpfHead.ToString () + if tail = "" then "" else $", %s{tail}"
+        let dkim = this.Dkim |> Seq.map string<DkimAuthResult> |> String.concat ", "
+        $"[%s{spf} ||| %s{dkim}]"
+
     static member ofXml (node : XmlNode) : AuthResult =
         if not node.HasChildNodes then
             failwith "expected auth result to have children, but it did not"
@@ -591,6 +666,9 @@ type Record =
         Identifiers : Identifier
         AuthResults : AuthResult
     }
+
+    override this.ToString () =
+        $"""%O{this.Row} %O{this.Identifiers}: %O{this.AuthResults}"""
 
     static member ofXml (node : XmlNode) : Record =
         if not node.HasChildNodes then
