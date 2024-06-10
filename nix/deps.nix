@@ -8,8 +8,8 @@
   })
   (fetchNuGet {
     pname = "fantomas";
-    version = "6.3.7";
-    sha256 = "1z1a5bw7vwz6g8nvfgkvx66jnm4hmvn62vbyq0as60nw0jlvaidl";
+    version = "6.3.9";
+    sha256 = "1b34iiiff02bbzjv03zyna8xmrgs6y87zdvp5i5k58fcqpjw44sx";
   })
   (fetchNuGet {
     pname = "fsharp-analyzers";
@@ -78,8 +78,8 @@
   })
   (fetchNuGet {
     pname = "Nerdbank.GitVersioning";
-    version = "3.6.133";
-    sha256 = "1cdw8krvsnx0n34f7fm5hiiy7bs6h3asvncqcikc0g46l50w2j80";
+    version = "3.6.139";
+    sha256 = "0npcryhq3r0c2zi940jk39h13mzc4hyg7z8gm6jdmxi1aqv1vh8c";
   })
   (fetchNuGet {
     pname = "NETStandard.Library";
