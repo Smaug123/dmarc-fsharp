@@ -3,8 +3,8 @@
 {fetchNuGet}: [
   (fetchNuGet {
     pname = "BouncyCastle.Cryptography";
-    version = "2.3.1";
-    sha256 = "0wagr2ibc12mp58i1fql2xbfb1h2b1bpi1gpsynkl2il3mycvyxg";
+    version = "2.4.0";
+    sha256 = "1400lbwk16ddpvfpp5c655ghcdxngr33h9c75h7fscsqdcsxk00f";
   })
   (fetchNuGet {
     pname = "fantomas";
@@ -73,8 +73,8 @@
   })
   (fetchNuGet {
     pname = "MimeKit";
-    version = "4.6.0";
-    sha256 = "1rmz54d836gjhm9mhpa57h6d36gw4pdqh9xjidyy7548c30qdqrr";
+    version = "4.7.0";
+    sha256 = "0b9rf5nwjkcp2glhb0rj4fpx2ysvckijdmssd07rilbp5w8nkl3d";
   })
   (fetchNuGet {
     pname = "Nerdbank.GitVersioning";
