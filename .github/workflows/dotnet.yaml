@@ -165,7 +165,12 @@ jobs:
         run: if [[ $(find packed-plugin -maxdepth 1 -name 'Dmarc.*.nupkg' -printf c | wc -c) -ne "1" ]]; then exit 1; fi
 
   all-required-checks-complete:
+    if: ${{ always() }}
     needs: [check-dotnet-format, check-nix-format, build, build-nix, linkcheck, flake-check, analyzers, nuget-pack, expected-pack]
     runs-on: ubuntu-latest
     steps:
-      - run: echo "All required checks complete."
+      - uses: actions/checkout@v4
+      - name: Check job statuses
+        env:
+            RESULTS: ${{ toJSON(needs) }}
+        run: python .github/workflows/required_checks.py
