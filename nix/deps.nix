@@ -13,8 +13,8 @@
   })
   (fetchNuGet {
     pname = "fsharp-analyzers";
-    version = "0.26.0";
-    hash = "sha256-60Bl36LOb/zVNdH2SBSuQ5O41lP9dKTNZbs5vvYs+3U=";
+    version = "0.26.1";
+    hash = "sha256-UqSK8PoXRJMZWKphMmWpl5klVn82EM1VczNZ1AOZ6Sw=";
   })
   (fetchNuGet {
     pname = "FSharp.Core";
