@@ -23,8 +23,8 @@
   })
   (fetchNuGet {
     pname = "FSharp.Core";
-    version = "8.0.300";
-    hash = "sha256-BGDVf+oYfTgeqdS5iApzfT+rEhFN3P/9iuJDC1PuHZU=";
+    version = "8.0.400";
+    hash = "sha256-wlrcAjjvI5YtnHR7kFH8uRUA4GomJYmqr41K5LYjCGs=";
   })
   (fetchNuGet {
     pname = "FsUnit";
