@@ -73,8 +73,8 @@
   })
   (fetchNuGet {
     pname = "MimeKit";
-    version = "4.7.1";
-    hash = "sha256-yTUqWAFU1v8jo70D09A+l8tsc+pr6IMOORD9L8EDz9o=";
+    version = "4.8.0";
+    hash = "sha256-4EB54ktBXuq5QRID9i8E7FzU7YZTE4wwH+2yr7ivi/Q=";
   })
   (fetchNuGet {
     pname = "Nerdbank.GitVersioning";
