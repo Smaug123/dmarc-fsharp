@@ -3,8 +3,8 @@
 {fetchNuGet}: [
   (fetchNuGet {
     pname = "BouncyCastle.Cryptography";
-    version = "2.4.0";
-    hash = "sha256-DoDZNWtYM+0OLIclOEZ+tjcGXymGlXvdvq2ZMPmiAJA=";
+    version = "2.5.0";
+    hash = "sha256-4JTx7QKSu3BE7kPuspN1KK2LtA9BWKLHZRLfOBEzWHY=";
   })
   (fetchNuGet {
     pname = "fantomas";
@@ -23,8 +23,8 @@
   })
   (fetchNuGet {
     pname = "FSharp.Core";
-    version = "8.0.400";
-    hash = "sha256-wlrcAjjvI5YtnHR7kFH8uRUA4GomJYmqr41K5LYjCGs=";
+    version = "9.0.100-beta.24422.2";
+    hash = "sha256-J72a8/QJEBfzlZKArJxoYkwY9mkDmZo9qsCRTmKv6lM=";
   })
   (fetchNuGet {
     pname = "FsUnit";
@@ -73,13 +73,13 @@
   })
   (fetchNuGet {
     pname = "MimeKit";
-    version = "4.8.0";
-    hash = "sha256-4EB54ktBXuq5QRID9i8E7FzU7YZTE4wwH+2yr7ivi/Q=";
+    version = "4.9.0";
+    hash = "sha256-V7M7ejLKzE/RZZPtnUVaPlFq4xo8xViBIlDZ7FWBKAA=";
   })
   (fetchNuGet {
     pname = "Nerdbank.GitVersioning";
-    version = "3.6.146";
-    hash = "sha256-6lpjiwxVrwjNUhPQ6C7LzazKdBQlAbmyEQk/qxrmr8Y=";
+    version = "3.7.112";
+    hash = "sha256-vrItlaH5MpBHa4MI1cQgI11NAe4W3XsxR9DizFE7fus=";
   })
   (fetchNuGet {
     pname = "NETStandard.Library";
@@ -93,8 +93,8 @@
   })
   (fetchNuGet {
     pname = "NUnit";
-    version = "4.2.2";
-    hash = "sha256-+0OS67ITalmG9arYCgQF/+YbmPRnB3pIIykew0kvoCc=";
+    version = "4.3.0";
+    hash = "sha256-dL8+6yL7nwgQKZR3wo2hAOUt3d2EFN10GJH1LzY89I8=";
   })
   (fetchNuGet {
     pname = "NUnit3TestAdapter";
@@ -113,7 +113,7 @@
   })
   (fetchNuGet {
     pname = "System.Security.Cryptography.Pkcs";
-    version = "8.0.0";
-    hash = "sha256-yqfIIeZchsII2KdcxJyApZNzxM/VKknjs25gDWlweBI=";
+    version = "8.0.1";
+    hash = "sha256-KMNIkJ3yQ/5O6WIhPjyAIarsvIMhkp26A6aby5KkneU=";
   })
 ]
