@@ -51,7 +51,7 @@
           src = ./.;
           projectFile = "./Dmarc.App/Dmarc.App.fsproj";
           testProjectFile = "./Dmarc.Test/Dmarc.Test.fsproj";
-          nugetDeps = ./nix/deps.nix; # `nix build .#default.passthru.fetch-deps && ./result` and put the result here
+          nugetDeps = ./nix/deps.json; # `nix build .#default.fetch-deps && ./result` and put the result here
           doCheck = true;
         };
       };
