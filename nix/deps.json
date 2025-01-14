@@ -6,8 +6,8 @@
   },
   {
     "pname": "fantomas",
-    "version": "6.3.16",
-    "hash": "sha256-4tRdYf+/Q1iedx+DDuIKVGlIWQdr6erM51VdKzZkhCs="
+    "version": "7.0.0",
+    "hash": "sha256-v4bXmvjZOYxl5RSIHuqVfDzBQdRz5SrmzZtD6SeEYTY="
   },
   {
     "pname": "fsharp-analyzers",
@@ -81,8 +81,8 @@
   },
   {
     "pname": "Nerdbank.GitVersioning",
-    "version": "3.7.112",
-    "hash": "sha256-vrItlaH5MpBHa4MI1cQgI11NAe4W3XsxR9DizFE7fus="
+    "version": "3.7.115",
+    "hash": "sha256-sqn+i7vvBgBUtm7j82mH+SpApgI2hsmL5DYfLm1Z7gw="
   },
   {
     "pname": "NETStandard.Library",
