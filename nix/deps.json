@@ -26,8 +26,8 @@
   },
   {
     "pname": "FSharp.Core",
-    "version": "9.0.100",
-    "hash": "sha256-V1q3CjbRvWZqxpi6cXD/R0F7pyXGGtH83M5Z/ITDrp8="
+    "version": "9.0.101",
+    "hash": "sha256-bR4PHanvKrzD43qFQxmOmmhhpz+ZmKZMPlgGnlRNcp4="
   },
   {
     "pname": "FsUnit",
@@ -76,8 +76,8 @@
   },
   {
     "pname": "MimeKit",
-    "version": "4.9.0",
-    "hash": "sha256-V7M7ejLKzE/RZZPtnUVaPlFq4xo8xViBIlDZ7FWBKAA="
+    "version": "4.10.0",
+    "hash": "sha256-SLQ7+Yh3o8bbxyRsA5yJgeAOkR8SqMI0vB8VwjQDzl8="
   },
   {
     "pname": "Nerdbank.GitVersioning",
