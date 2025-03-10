@@ -1,8 +1,8 @@
 [
   {
     "pname": "BouncyCastle.Cryptography",
-    "version": "2.5.0",
-    "hash": "sha256-4JTx7QKSu3BE7kPuspN1KK2LtA9BWKLHZRLfOBEzWHY="
+    "version": "2.5.1",
+    "hash": "sha256-ISDd8fS6/cIJIXBFDd7F3FQ0wzWkAo4r8dvycb8iT6c="
   },
   {
     "pname": "fantomas",
@@ -11,8 +11,8 @@
   },
   {
     "pname": "fsharp-analyzers",
-    "version": "0.29.0",
-    "hash": "sha256-e4G7/5DwwSZYvVE9yy+g8n1easPLC6/fDszioIsT7Dw="
+    "version": "0.29.1",
+    "hash": "sha256-wfZbODwGDcPINaMy/uOLPN9aztDfJg5JXy0t+bGyy1k="
   },
   {
     "pname": "FSharp.Core",
@@ -111,8 +111,8 @@
   },
   {
     "pname": "MimeKit",
-    "version": "4.10.0",
-    "hash": "sha256-SLQ7+Yh3o8bbxyRsA5yJgeAOkR8SqMI0vB8VwjQDzl8="
+    "version": "4.11.0",
+    "hash": "sha256-UTP+pfP3q4X65/KNGBTkHo4KZjeHZ10dQbr58Qf42iQ="
   },
   {
     "pname": "Nerdbank.GitVersioning",
@@ -148,11 +148,6 @@
     "pname": "System.Diagnostics.DiagnosticSource",
     "version": "5.0.0",
     "hash": "sha256-6mW3N6FvcdNH/pB58pl+pFSCGWgyaP4hfVtC/SMWDV4="
-  },
-  {
-    "pname": "System.Formats.Asn1",
-    "version": "8.0.1",
-    "hash": "sha256-may/Wg+esmm1N14kQTG4ESMBi+GQKPp0ZrrBo/o6OXM="
   },
   {
     "pname": "System.Reflection.Metadata",
