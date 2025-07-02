@@ -31,8 +31,8 @@
   },
   {
     "pname": "FsUnit",
-    "version": "7.0.1",
-    "hash": "sha256-K85CIdxMeFSHEKZk6heIXp/oFjWAn7dBILKrw49pJUY="
+    "version": "7.1.1",
+    "hash": "sha256-UMCEGKxQ4ytjmPuVpiNaAPbi3RQH9gqa61JJIUS/6hg="
   },
   {
     "pname": "Microsoft.ApplicationInsights",
@@ -111,8 +111,8 @@
   },
   {
     "pname": "MimeKit",
-    "version": "4.12.0",
-    "hash": "sha256-4i/RvXyXQsb6LlEs7tZWz5d5ab8mw3R8Wwp7FXSbMaA="
+    "version": "4.13.0",
+    "hash": "sha256-mPFMFcK+ks4aoA02JfC6JUhUyc1LTVp5siW9t3wUgNo="
   },
   {
     "pname": "Nerdbank.GitVersioning",
