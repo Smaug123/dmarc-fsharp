@@ -6,13 +6,13 @@
   },
   {
     "pname": "fantomas",
-    "version": "7.0.2",
-    "hash": "sha256-BAaENIm/ksTiXrUImRgKoIXTGIlgsX7ch6ayoFjhJXA="
+    "version": "7.0.3",
+    "hash": "sha256-0XlfV7SxXPDnk/CjkUesJSaH0cxlNHJ+Jj86zNUhkNA="
   },
   {
     "pname": "fsharp-analyzers",
-    "version": "0.31.0",
-    "hash": "sha256-PoAvaXbXsmvVw870UsnqdD20HoBHO7u4bzoaz5DXfzM="
+    "version": "0.32.1",
+    "hash": "sha256-le6rPnAF7cKGBZ2w8H2u9glK+6rT2ZjiAVnrkH2IhrM="
   },
   {
     "pname": "FSharp.Core",
