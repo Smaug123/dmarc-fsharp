@@ -16,18 +16,13 @@
   },
   {
     "pname": "FSharp.Core",
-    "version": "5.0.2",
-    "hash": "sha256-YOoosLEiszPsOOaNAkWhFGU04JJKDOFVoA/ggrZMN10="
-  },
-  {
-    "pname": "FSharp.Core",
     "version": "6.0.0",
     "hash": "sha256-aQDRgiGC7iTyzNEmvyd2RBCDcLG0I1dbfncHlkbeUMI="
   },
   {
     "pname": "FSharp.Core",
-    "version": "9.0.101",
-    "hash": "sha256-bR4PHanvKrzD43qFQxmOmmhhpz+ZmKZMPlgGnlRNcp4="
+    "version": "9.0.303",
+    "hash": "sha256-AxR6wqodeU23KOTgkUfIgbavgbcSuzD4UBP+tiFydgA="
   },
   {
     "pname": "FsUnit",
@@ -116,8 +111,8 @@
   },
   {
     "pname": "Nerdbank.GitVersioning",
-    "version": "3.7.115",
-    "hash": "sha256-sqn+i7vvBgBUtm7j82mH+SpApgI2hsmL5DYfLm1Z7gw="
+    "version": "3.9.50",
+    "hash": "sha256-BiBfXwr8ob2HTaFk2L5TwAgtvd/EPoqudSI9nhAjQPI="
   },
   {
     "pname": "NETStandard.Library",
@@ -128,11 +123,6 @@
     "pname": "Newtonsoft.Json",
     "version": "13.0.3",
     "hash": "sha256-hy/BieY4qxBWVVsDqqOPaLy1QobiIapkbrESm6v2PHc="
-  },
-  {
-    "pname": "NUnit",
-    "version": "4.0.1",
-    "hash": "sha256-jd1CD5nHVXkpvBNpVDJcJyfTggCHLyDBySVSvtrA8Uk="
   },
   {
     "pname": "NUnit",
