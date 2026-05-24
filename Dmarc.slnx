@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Dmarc.App/Dmarc.App.fsproj" />
+  <Project Path="Dmarc.Test/Dmarc.Test.fsproj" />
+  <Project Path="Dmarc/Dmarc.fsproj" />
+</Solution>
